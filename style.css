@@ -1,11 +1,27 @@
-/* Reset & General */
-* { margin: 0; padding: 0; box-box-sizing: border-box; }
-body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; scroll-behavior: smooth; }
-.container { width: 85%; max-width: 1100px; margin: auto; }
-.bg-light { background: #f4f4f4; }
-.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #002d5b; position: relative; }
+/* 1. RESET DASAR */
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
-/* Navbar */
+body { 
+    font-family: 'Roboto', sans-serif; 
+    color: #333; 
+    line-height: 1.6; 
+    scroll-behavior: smooth; 
+    overflow-x: hidden; /* Mencegah layar goyang ke samping */
+}
+
+/* 2. KUNCI SIMETRIS (Wajib Sama di Semua Section) */
+.container { 
+    width: 85%; 
+    max-width: 1100px; 
+    margin: 0 auto !important; /* Memaksa konten ke tengah */
+    position: relative;
+}
+
+/* 3. NAVBAR */
 nav { background: #002d5b; color: white; padding: 20px 0; position: sticky; top: 0; z-index: 1000; }
 nav .container { display: flex; justify-content: space-between; align-items: center; }
 .logo { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: bold; }
@@ -14,43 +30,199 @@ nav ul { display: flex; list-style: none; }
 nav ul li a { color: white; text-decoration: none; margin-left: 20px; font-size: 0.9rem; transition: 0.3s; }
 nav ul li a:hover { color: #00a8ff; }
 
-/* Hero */
+/* 4. HERO SECTION */
 .hero { background: linear-gradient(to right, #002d5b, #004a8d); color: white; padding: 100px 0; }
 .hero .container { display: flex; align-items: center; gap: 50px; }
 .hero-content { flex: 1; }
 .hero-content h1 { font-size: 3rem; margin-bottom: 10px; font-family: 'Montserrat', sans-serif; }
 .tagline { font-size: 1.2rem; color: #00a8ff; font-weight: bold; margin-bottom: 20px; }
 .btn { display: inline-block; background: #00a8ff; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; margin-top: 20px; transition: 0.3s; }
-.btn:hover { background: #0086cc; transform: translateY(-3px); }
-.hero-image img { width: 300px; height: 300px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.2); object-fit: cover; }
+.hero-image img { width: 300px; height: 380px; border-radius: 50%; border: 5px solid rgba(255,255,255,0.2); object-fit: cover; }
 
-/* Sections */
-section { padding: 80px 0; }
-.about-text { text-align: center; max-width: 800px; margin: auto; }
+/* 5. GENERAL SECTION STYLE */
+section { padding: 80px 0; width: 100%; }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; color: #002d5b; }
+.bg-light { background: #f4f4f4; }
 
-/* Skills Grid */
+/* 6. RESUME GRID (Riwayat Hidup) */
+.resume-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; /* Membagi 2 kolom sama besar */
+    gap: 50px; 
+    width: 100%; /* Dia akan mengikuti lebar .container (85%) */
+}
+
+.resume-col h3 { 
+    color: #002d5b; 
+    margin-bottom: 25px; 
+    border-left: 5px solid #00a8ff; 
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.resume-item { 
+    margin-bottom: 20px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid #eee; 
+}
+
+.resume-item h4 { color: #333; font-size: 1.1rem; margin-bottom: 5px; }
+.resume-item .company { color: #00a8ff; font-weight: bold; font-size: 0.9rem; }
+
+/* 7. SKILLS & PORTFOLIO */
 .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .skill-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-.skill-card h3 { color: #002d5b; margin-bottom: 15px; border-bottom: 2px solid #00a8ff; display: inline-block; }
-.skill-card ul { list-style: square; padding-left: 20px; }
-
-/* Portfolio */
 .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-.port-item { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-.port-item img { width: 100%; display: block; }
-.port-desc { padding: 20px; }
 
-/* Contact */
+/* 8. CONTACT & FOOTER */
 .contact-box { text-align: center; background: #002d5b; color: white; padding: 50px; border-radius: 10px; }
-.social-links { margin-top: 20px; }
-.fb-link, .email-link { color: white; text-decoration: none; margin: 0 15px; border: 1px solid white; padding: 10px 20px; border-radius: 5px; }
-.fb-link:hover { background: #1877f2; border-color: #1877f2; }
-
 footer { text-align: center; padding: 30px; background: #222; color: #777; font-size: 0.8rem; }
 
-/* Responsive */
+/* 9. RESPONSIVE (Untuk HP) */
 @media (max-width: 768px) {
     .hero .container { flex-direction: column-reverse; text-align: center; }
-    .skills-grid { grid-template-columns: 1fr; }
+    .resume-grid, .skills-grid { grid-template-columns: 1fr; }
     nav ul { display: none; }
+}
+
+/* Update Foto Hero agar Oval Sempurna */
+.hero-image img {
+    width: 250px;
+    height: 350px; /* Tinggi berbeda dengan lebar */
+    border-radius: 50%; /* Membuat efek oval */
+    object-fit: cover;
+    border: 5px solid rgba(255,255,255,0.2);
+}
+
+/* Tombol Detail */
+.btn-detail {
+    background: transparent;
+    border: 1px solid #00a8ff;
+    color: #00a8ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: #00a8ff;
+    color: white;
+}
+
+/* MODAL STYLES */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    animation: slideDown 0.4s;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-btn:hover { color: black; }
+
+/* Container untuk tombol di Hero */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Tombol Outline (PDF) */
+.btn-outline {
+    background: transparent !important;
+    border: 2px solid #00a8ff !important;
+}
+
+.btn-outline:hover {
+    background: #00a8ff !important;
+}
+
+/* Tombol kecil di Navbar */
+.btn-pdf-small {
+    background: #00a8ff;
+    padding: 5px 15px !important;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Gaya Tombol Detail di Resume */
+.btn-detail {
+    background: transparent;
+    border: 1px solid #00a8ff;
+    color: #00a8ff;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-detail:hover {
+    background: #00a8ff;
+    color: white;
+}
+
+
+/* Hero Buttons */
+.hero-btns { display: flex; gap: 15px; margin-top: 25px; }
+.btn-outline { background: transparent !important; border: 2px solid #00a8ff !important; }
+.btn-outline:hover { background: #00a8ff !important; color: white !important; }
+
+/* Navbar PDF Button */
+.btn-pdf-small { background: #00a8ff; padding: 5px 15px !important; border-radius: 4px; font-weight: bold; color: white !important; }
+
+/* Resume Detail Button */
+.btn-detail { background: transparent; border: 1px solid #00a8ff; color: #00a8ff; padding: 5px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; margin-top: 10px; transition: 0.3s; font-weight: bold; }
+.btn-detail:hover { background: #00a8ff; color: white; }
+
+/* Modal Styles */
+.modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); backdrop-filter: blur(5px); }
+.modal-content { background-color: white; margin: 10% auto; padding: 30px; border-radius: 15px; width: 90%; max-width: 500px; position: relative; animation: slideDown 0.4s; }
+@keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.close-btn { position: absolute; right: 20px; top: 15px; font-size: 28px; cursor: pointer; color: #aaa; }
+
+.about-text p {
+    text-align: justify; /* Membuat tulisan rata kiri-kanan */
+    text-justify: inter-word; /* Mengatur spasi antar kata agar lebih halus */
+    font-size: 1.1rem;
+    line-height: 1.8;        /* Memberi ruang baca yang nyaman */
+    color: #444;
+    max-width: 800px;    /* Membatasi lebar teks agar nyaman dibaca */
+    margin: 0 auto;      /* Memastikan teks tetap di tengah container */
+}
+
+.about-text {
+    width: 100%;             /* Memastikan box mengambil lebar penuh container */
+    margin-top: 20px;
 }

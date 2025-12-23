@@ -11,13 +11,15 @@
 
     <nav>
         <div class="container">
-            <div class="logo">MUSTOFA<span>-ENG</span></div>
+            <div class="logo">MUSTOFA<span>-Eng</span></div>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#resume">Resume</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="CV-Mustofa.pdf" class="btn-pdf-small" target="_blank">Download CV</a></li>
             </ul>
         </div>
     </nav>
@@ -28,10 +30,13 @@
                 <h1>Mustofa, S.kom., M.T.</h1>
                 <p class="tagline">Mechanical Engineer | Systems Information Expert</p>
                 <p>Bridging the gap between hardware mechanics and digital intelligence.</p>
-                <a href="#contact" class="btn">Hire Me</a>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="CV-Mustofa.pdf" class="btn btn-outline" target="_blank">Download CV (PDF)</a>
+                </div>
             </div>
             <div class="hero-image">
-                <img src="foto-profil.jpeg" alt="Foto Mustofa" onerror="this.src='https://via.placeholder.com/300x300?text=Foto+Mustofa'">
+                <img src="foto-profil.jpeg" alt="Foto Mustofa" onerror="this.src='https://via.placeholder.com/300x400?text=Foto+Mustofa'">
             </div>
         </div>
     </header>
@@ -40,8 +45,73 @@
         <div class="container">
             <h2 class="section-title">Tentang Saya</h2>
             <div class="about-text">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dengan latar belakang pendidikan <strong>S2 Teknik Mesin (Manufaktur & Material)</strong> dan <strong>S1 Sistem Informasi</strong>, saya memiliki kombinasi unik untuk mengelola sistem industri modern berbasis digital.</p>
-                <p>Perjalanan saya dimulai dari SMK Otomotif yang membentuk dasar teknis lapangan saya, hingga tingkat pascasarjana yang mengasah kemampuan strategis dan rekayasa material saya.</p>
+                <p>Dengan latar belakang pendidikan <strong>S2 Teknik Mesin</strong> dan <strong>S1 Sistem Informasi</strong>, saya memiliki kombinasi unik untuk mengelola sistem industri modern berbasis digital.
+                Saya berfokus pada integrasi pemeliharaan mekanis dengan analisis data sistem informasi untuk meningkatkan efisiensi operasional.
+                Berpengalaman luas dalam menangani berbagai sistem mekanikal industri mulai dari otomotif hingga sistem udara bertekanan.
+                Mari berkolaborasi untuk menciptakan solusi engineering yang cerdas dan terintegrasi secara digital.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Riwayat Hidup</h2>
+            <div class="resume-grid">
+                
+                <div class="resume-col">
+                    <h3>💼 Pengalaman Kerja</h3>
+                    
+                    <div class="resume-item">
+                        <h4>Maintenance Coordinator</h4>
+                        <p class="company">PT. Multigrafika Global | Okt 2025 - Sekarang</p>
+                        <button class="btn-detail" onclick="openModal('Maintenance Coordinator', 'PT. Multigrafika Global', 'Menyusun jadwal maintenance mesin produksi, koordinasi tim teknisi, dan memastikan ketersediaan suku cadang untuk meminimalisir downtime.')">Detail Pekerjaan</button>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Teknisi Air Compressor & Air Dryer</h4>
+                        <p class="company">PT. Citra Airindo Abadi | Sept 2022 - Sekarang</p>
+                        <button class="btn-detail" onclick="openModal('Teknisi Air Compressor', 'PT. Citra Airindo Abadi', 'Melakukan servis rutin, perbaikan darurat pada unit Air Compressor, serta monitoring sistem Air Dryer agar kualitas udara produksi tetap stabil.')">Detail Pekerjaan</button>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Store Leader</h4>
+                        <p class="company">PT. Surga Mobil Indonesia (Mobeng) | 2018 - 2020</p>
+                        <button class="btn-detail" onclick="openModal('Store Leader', 'Mobeng', 'Bertanggung jawab atas operasional bengkel/toko secara keseluruhan, manajemen inventaris, dan memastikan target kepuasan pelanggan tercapai.')">Detail Pekerjaan</button>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Technical Support</h4>
+                        <p class="company">PT. Autorent Lancar Sejahtera | 2015 - 2017</p>
+                        <button class="btn-detail" onclick="openModal('Technical Support', 'PT. Autorent', 'Memberikan dukungan teknis terkait pemeliharaan kendaraan sewa dan melakukan diagnosa awal jika terjadi kendala pada unit pelanggan.')">Detail Pekerjaan</button>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Mekanik Otomotif</h4>
+                        <p class="company">PT. Sarana Mandala Utama | 2013 - 2015</p>
+                        <button class="btn-detail" onclick="openModal('Mekanik Otomotif', 'PT. Sarana Mandala Utama', 'Melaksanakan perbaikan mesin kendaraan, sistem transmisi, serta perawatan rutin sesuai standar operasional perusahaan.')">Detail Pekerjaan</button>
+                    </div>
+                </div>
+
+                <div class="resume-col">
+                    <h3>🎓 Pendidikan</h3>
+                    <div class="resume-item">
+                        <h4>Magister Teknik Mesin (IPK 3.53)</h4>
+                        <p class="company">Universitas Pancasila | Lulus 2025</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>S1 Sistem Informasi (IPK 3.43)</h4>
+                        <p class="company">STMIK Nusa Mandiri | Lulus 2017</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>SMK Otomotif</h4>
+                        <p class="company">SMK NU Kaplongan | Lulus 2008</p>
+                    </div>
+                    <div class="resume-item">
+                        <h4>MTsN Ciwaringin</h4>
+                        <p class="company">Kab. Cirebon | Lulus 2005</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -55,15 +125,15 @@
                     <ul>
                         <li>Manufacturing Processes</li>
                         <li>Material Science</li>
-                        <li>AutoCAD / SolidWorks</li>
+                        <li>Pneumatic System</li>
                     </ul>
                 </div>
                 <div class="skill-card">
                     <h3>Information Technology</h3>
                     <ul>
                         <li>System Analysis & Design</li>
+                        <li>Web Development</li>
                         <li>Database Management</li>
-                        <li>Web Development (HTML, CSS, JS)</li>
                     </ul>
                 </div>
             </div>
@@ -71,43 +141,56 @@
     </section>
 
     <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2 class="section-title">Proyek & Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="port-item">
-                    <img src="https://via.placeholder.com/400x250?text=Proyek+Mesin" alt="Proyek 1">
-                    <div class="port-desc">
-                        <h4>Optimasi Material Produksi</h4>
-                        <p>Analisis material untuk efisiensi manufaktur.</p>
-                    </div>
-                </div>
-                <div class="port-item">
-                    <img src="https://via.placeholder.com/400x250?text=Proyek+IT" alt="Proyek 2">
-                    <div class="port-desc">
-                        <h4>Sistem Informasi Inventori</h4>
-                        <p>Digitalisasi manajemen stok sparepart otomotif.</p>
-                    </div>
-                </div>
+    <div class="container">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="portfolio-grid">
+            
+            <div class="skill-card"> <h3>Sistem Monitoring Kompresor</h3>
+                <p>Integrasi sensor tekanan dengan dashboard berbasis web.</p>
+                <button class="btn-detail" onclick="openModal('Monitoring Kompresor', 'Project Mandiri', 'Proyek ini menggabungkan sensor IoT untuk membaca tekanan udara secara real-time dan menampilkannya dalam grafik web menggunakan database MySQL.')">Lihat Proyek</button>
             </div>
+
+            <div class="skill-card">
+                <h3>Optimasi Perawatan Mesin</h3>
+                <p>Analisis data maintenance untuk mengurangi downtime pabrik.</p>
+                <button class="btn-detail" onclick="openModal('Optimasi Perawatan', 'PT. Multigrafika Global', 'Menggunakan metode analisis sistem informasi untuk menentukan jadwal preventive maintenance yang paling efisien berdasarkan histori kerusakan mesin.')">Lihat Proyek</button>
+            </div>
+
+            <div class="skill-card">
+                <h3>Aplikasi Inventaris Sparepart</h3>
+                <p>Sistem manajemen stok barang berbasis PHP dan Bootstrap.</p>
+                <button class="btn-detail" onclick="openModal('Aplikasi Inventaris', 'Mobeng', 'Membangun aplikasi internal untuk melacak keluar masuknya suku cadang otomotif di gudang secara digital dan akurat.')">Lihat Proyek</button>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Hubungi Saya</h2>
-            <div class="contact-box">
-                <p>Tertarik untuk berkolaborasi atau ingin melihat CV lengkap saya?</p>
-                <div class="social-links">
-                    <a href="https://web.facebook.com/Mustofa.Eng" target="_blank" class="fb-link">Facebook Profile</a>
-                    <a href="mailto:email@anda.com" class="email-link">Kirim Email</a>
-                </div>
+    <div class="container">
+        <h2 class="section-title">Hubungi Saya</h2>
+        <div class="contact-box">
+            <p>Tertarik untuk berkolaborasi? Silakan klik tombol di bawah untuk menghubungi saya langsung.</p>
+            <div class="social-links" style="margin-top: 20px;">
+                <a href="mailto:engineer@mustofa-eng.my.id?subject=Tanya%20Portfolio%20Mustofa" class="btn">Kirim Email</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <footer>
-        <p>&copy; 2024 mustofa-eng.my.id | All Rights Reserved</p>
+        <p>&copy; 2026 mustofa-eng.my.id</p>
     </footer>
+
+    <div id="jobModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color: #002d5b;">Jabatan</h2>
+            <h4 id="modalCompany" style="color: #00a8ff; margin-bottom: 15px;">Perusahaan</h4>
+            <hr>
+            <p id="modalDesc" style="margin-top: 15px; color: #555; line-height: 1.8;"></p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
