@@ -35,3 +35,30 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function requestFullCV() {
+    alert("Demi keamanan data pribadi, permintaan file CV lengkap harap hubungi saya langsung melalui email: engineer@mustofa-eng.my.id");
+}
+
+// Fungsi untuk membuka modal download
+function openDownloadModal() {
+    document.getElementById('downloadModal').style.display = 'block';
+}
+
+// Fungsi untuk menutup modal download
+function closeDownloadModal() {
+    document.getElementById('downloadModal').style.display = 'none';
+}
+
+// Menutup modal jika klik di luar area kotak (Update fungsi window.onclick)
+window.onclick = function(event) {
+    let jobModal = document.getElementById('jobModal');
+    let dlModal = document.getElementById('downloadModal');
+    
+    if (event.target == jobModal) {
+        jobModal.style.display = 'none';
+    }
+    if (event.target == dlModal) {
+        dlModal.style.display = 'none';
+    }
+}

@@ -19,7 +19,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="CV-Mustofa.pdf" class="btn-pdf-small" target="_blank">Download CV</a></li>
+                <li><a href="javascript:void(0)" class="btn-pdf-small" onclick="openDownloadModal()">Download CV</a></li>
             </ul>
         </div>
     </nav>
@@ -32,7 +32,7 @@
                 <p>Bridging the gap between hardware mechanics and digital intelligence.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn">Hire Me</a>
-                    <a href="CV-Mustofa.pdf" class="btn btn-outline" target="_blank">Download CV (PDF)</a>
+                    <a href="javascript:void(0)" class="btn btn-outline" onclick="openDownloadModal()">Download CV (PDF)</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -69,47 +69,105 @@
 
                     <div class="resume-item">
                         <h4>Teknisi Air Compressor & Air Dryer</h4>
-                        <p class="company">PT. Citra Airindo Abadi | Sept 2022 - Sekarang</p>
+                        <p class="company">PT. Citra Airindo Abadi | Sept 2022 - Sept 2025</p>
                         <button class="btn-detail" onclick="openModal('Teknisi Air Compressor', 'PT. Citra Airindo Abadi', 'Melakukan servis rutin, perbaikan darurat pada unit Air Compressor, serta monitoring sistem Air Dryer agar kualitas udara produksi tetap stabil.')">Detail Pekerjaan</button>
                     </div>
 
                     <div class="resume-item">
                         <h4>Store Leader</h4>
-                        <p class="company">PT. Surga Mobil Indonesia (Mobeng) | 2018 - 2020</p>
+                        <p class="company">PT. Surga Mobil Indonesia (Mobeng) | Apr 2018 - Okt 2020</p>
                         <button class="btn-detail" onclick="openModal('Store Leader', 'Mobeng', 'Bertanggung jawab atas operasional bengkel/toko secara keseluruhan, manajemen inventaris, dan memastikan target kepuasan pelanggan tercapai.')">Detail Pekerjaan</button>
                     </div>
 
                     <div class="resume-item">
                         <h4>Technical Support</h4>
-                        <p class="company">PT. Autorent Lancar Sejahtera | 2015 - 2017</p>
+                        <p class="company">PT. Autorent Lancar Sejahtera | Okt 2015 - Sept 2017</p>
                         <button class="btn-detail" onclick="openModal('Technical Support', 'PT. Autorent', 'Memberikan dukungan teknis terkait pemeliharaan kendaraan sewa dan melakukan diagnosa awal jika terjadi kendala pada unit pelanggan.')">Detail Pekerjaan</button>
                     </div>
 
                     <div class="resume-item">
                         <h4>Mekanik Otomotif</h4>
-                        <p class="company">PT. Sarana Mandala Utama | 2013 - 2015</p>
+                        <p class="company">PT. Sarana Mandala Utama | Feb 2013 - Sept 2015</p>
                         <button class="btn-detail" onclick="openModal('Mekanik Otomotif', 'PT. Sarana Mandala Utama', 'Melaksanakan perbaikan mesin kendaraan, sistem transmisi, serta perawatan rutin sesuai standar operasional perusahaan.')">Detail Pekerjaan</button>
                     </div>
+                    <div class="resume-item">
+    <h4>Operator Produksi</h4>
+    <p class="company">PT. Astra Honda Motor | Jun 2010 - Feb 2012</p>
+    <button class="btn-detail" onclick="openModal(
+        'Operator Produksi', 
+        'PT. Astra Honda Motor', 
+        '• Bertanggung jawab dalam proses perakitan sepeda motor sesuai standar kualitas Astra. \n• Bekerja dengan target waktu yang ketat (Takt Time) untuk menjaga kelancaran alur produksi. \n• Menerapkan budaya kerja 5S dan standar keselamatan kerja (K3) di lingkungan manufaktur.')">
+        Detail Pekerjaan
+    </button>
+</div>
+
+<div class="resume-item">
+    <h4>Mekanik Otomotif</h4>
+    <p class="company">PT. Family Servisindo | Mar 2009 - Mar 2010</p>
+    <button class="btn-detail" onclick="openModal(
+        'Mekanik Otomotif', 
+        'PT. Family Servisindo', 
+        '• Melaksanakan perawatan berkala (service rutin) dan perbaikan mesin kendaraan. \n• Melakukan diagnosa kerusakan pada sistem transmisi, rem, dan bagian kaki-kaki kendaraan. \n• Memastikan hasil pengerjaan rapi dan sesuai dengan standar kepuasan pelanggan.')">
+        Detail Pekerjaan
+    </button>
+</div>
                 </div>
+
+               <div id="downloadModal" class="modal">
+    <div class="modal-content" style="text-align: center; max-width: 500px; padding: 30px;">
+        <span class="close-btn" onclick="closeDownloadModal()">&times;</span>
+        
+        <h2 style="color: #002d5b; margin-bottom: 15px;">Peringatan Keamanan</h2>
+        
+        <p style="margin-bottom: 25px; color: #333; line-height: 1.6;">
+            Demi keamanan data pribadi, permintaan file CV lengkap harap hubungi saya langsung melalui email: <br>
+            <strong style="color: #00a8ff;">engineer@mustofa-eng.my.id</strong>
+        </p>
+        
+       <div style="display: flex; gap: 15px; justify-content: center; align-items: center; height: 60px;">
+    <a href="CV-Mustofa.pdf" class="btn" target="_blank" onclick="closeDownloadModal()" 
+       style="background-color: #00a8ff; color: white; width: 140px; height: 45px; display: flex; align-items: center; justify-content: center; text-decoration: none; border-radius: 5px; font-weight: bold; border: none; padding: 0; margin: 0; box-sizing: border-box;">
+       Download
+    </a>
+    
+    <button onclick="closeDownloadModal()" 
+       style="background-color: #6c757d; color: white; width: 140px; height: 45px; display: flex; align-items: center; justify-content: center; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; padding: 0; margin: 0; box-sizing: border-box;">
+       Kembali
+    </button>
+</div>
+    </div>
+</div>
 
                 <div class="resume-col">
                     <h3>🎓 Pendidikan</h3>
                     <div class="resume-item">
-                        <h4>Magister Teknik Mesin (IPK 3.53)</h4>
-                        <p class="company">Universitas Pancasila | Lulus 2025</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>S1 Sistem Informasi (IPK 3.43)</h4>
-                        <p class="company">STMIK Nusa Mandiri | Lulus 2017</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>SMK Otomotif</h4>
-                        <p class="company">SMK NU Kaplongan | Lulus 2008</p>
-                    </div>
-                    <div class="resume-item">
-                        <h4>MTsN Ciwaringin</h4>
-                        <p class="company">Kab. Cirebon | Lulus 2005</p>
-                    </div>
+    <h4>Universitas Pancasila</h4>
+    <p class="company">Teknik Mesin | Lulus 2025 </p>
+    <button class="btn-detail" onclick="openModal('Magister Teknik Mesin', 'Universitas Pancasila', '• Fokus pada otomasi industri dan manufaktur. \n• IPK: 3,53.')">Detail</button>
+</div>
+
+<div class="resume-item">
+    <h4>STMIK Nusa Mandiri</h4>
+    <p class="company">Sistem Informasi | Lulus 2017</p>
+    <button class="btn-detail" onclick="openModal('Sarjana Komputer', 'STMIK Nusa Mandiri', '• Analisis database dan sistem informasi bisnis. \n• IPK: 3,43.')">Detail</button>
+</div>
+
+<div class="resume-item">
+    <h4>SMK NU Kaplongan</h4>
+    <p class="company">Jurusan Otomotif | Lulus 2008</p>
+    <button class="btn-detail" onclick="openModal('Pendidikan Kejuruan', 'SMK NU Kaplongan', '• Dasar-dasar mekanik otomotif dan kelistrikan.')">Detail</button>
+</div>
+
+<div class="resume-item">
+    <h4>MTsN Ciwaringin</h4>
+    <p class="company">Kab. Cirebon | Lulus 2005</p>
+</div>
+
+<div class="resume-item">
+    <h4>SDN Panyurungan</h4>
+    <p class="company">Kab. Subang | Lulus 2002</p>
+</div>
+                    
                 </div>
 
             </div>
@@ -124,8 +182,9 @@
                     <h3>Mechanical Engineering</h3>
                     <ul>
                         <li>Manufacturing Processes</li>
+                        <li>Automotive Technology & Engineering</li>
                         <li>Material Science</li>
-                        <li>Pneumatic System</li>
+                        <li>Pneumatic & Hydraulic System</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -143,26 +202,42 @@
     <section id="portfolio" class="portfolio">
     <div class="container">
         <h2 class="section-title">Portfolio</h2>
-        <div class="portfolio-grid">
-            
-            <div class="skill-card"> <h3>Sistem Monitoring Kompresor</h3>
-                <p>Integrasi sensor tekanan dengan dashboard berbasis web.</p>
-                <button class="btn-detail" onclick="openModal('Monitoring Kompresor', 'Project Mandiri', 'Proyek ini menggabungkan sensor IoT untuk membaca tekanan udara secara real-time dan menampilkannya dalam grafik web menggunakan database MySQL.')">Lihat Proyek</button>
-            </div>
+<div class="portfolio-grid">
+    
+    <div class="skill-card"> 
+        <h3>Electrical Infrastructure & Distribution</h3>
+        <p>Instalasi sistem distribusi daya dari KWH PLN ke panel utama gedung serta implementasi sistem proteksi kelistrikan.</p>
+        <button class="btn-detail" onclick="openModal(
+            'Electrical Infrastructure & Distribution', 
+            'PT. Multigrafika Global', 
+            '• Merakit panel distribusi utama (LVMDP) dan mengintegrasikan sistem kendali otomatis. \n• Mengatur penyeimbangan beban (balancing load) antar fase untuk stabilitas daya gedung. \n• Pemasangan sistem proteksi bertingkat guna menjaga keamanan komponen elektrikal.')">
+            Lihat Proyek
+        </button>
+    </div>
 
-            <div class="skill-card">
-                <h3>Optimasi Perawatan Mesin</h3>
-                <p>Analisis data maintenance untuk mengurangi downtime pabrik.</p>
-                <button class="btn-detail" onclick="openModal('Optimasi Perawatan', 'PT. Multigrafika Global', 'Menggunakan metode analisis sistem informasi untuk menentukan jadwal preventive maintenance yang paling efisien berdasarkan histori kerusakan mesin.')">Lihat Proyek</button>
-            </div>
+    <div class="skill-card">
+        <h3>Predictive Maintenance System</h3>
+        <p>Sistem pantau kondisi mesin melalui layar digital untuk mendeteksi gangguan secara dini dan mencegah downtime.</p>
+        <button class="btn-detail" onclick="openModal(
+            'Predictive Maintenance System', 
+            'PT. Multigrafika Global', 
+            '• Integrasi sensor tekanan kompresor dengan layar monitor (LCD) untuk pemantauan real-time di area kerja. \n• Implementasi logika PLC untuk mengatur otomatisasi on/off mesin berdasarkan kebutuhan angin. \n• Memudahkan pengawasan teknis tanpa harus mengecek manometer fisik secara manual di ruang mesin.')">
+            Lihat Proyek
+        </button>
+    </div>
 
-            <div class="skill-card">
-                <h3>Aplikasi Inventaris Sparepart</h3>
-                <p>Sistem manajemen stok barang berbasis PHP dan Bootstrap.</p>
-                <button class="btn-detail" onclick="openModal('Aplikasi Inventaris', 'Mobeng', 'Membangun aplikasi internal untuk melacak keluar masuknya suku cadang otomotif di gudang secara digital dan akurat.')">Lihat Proyek</button>
-            </div>
+    <div class="skill-card">
+        <h3>Mass Production & Quality Assurance</h3>
+        <p>Berpengalaman dalam produksi skala besar dengan standar disiplin tinggi untuk menjamin kualitas produk (zero defect).</p>
+        <button class="btn-detail" onclick="openModal(
+            'Mass Production & Quality Assurance', 
+            'PT. Astra Honda Motor', 
+            '• Mengoperasikan lini perakitan motor dengan standar Takt Time yang ketat dan efisien. \n• Melakukan kontrol kualitas mandiri untuk memastikan setiap unit memenuhi standar Zero Defect Astra. \n• Penerapan disiplin kerja 5S dan budaya K3 di lingkungan industri manufaktur kelas dunia.')">
+            Lihat Proyek
+        </button>
+    </div>
 
-        </div>
+</div>
     </div>
 </section>
 
